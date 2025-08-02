@@ -1,0 +1,28 @@
+{
+  "quizName": "General Knowledge Quiz",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the capital of France?",
+      "options": ["Berlin", "Madrid", "Paris", "Rome"],
+      "answer": 2
+    },
+    {
+      "id": 2,
+      "question": "What is the largest planet in our solar system?",
+      "options": ["Earth", "Jupiter", "Saturn", "Mars"],
+      "answer": 1
+    },
+    {
+      "id": 3,
+      "question": "Who wrote 'To Kill a Mockingbird'?",
+      "options": [
+        "Harper Lee",
+        "Mark Twain",
+        "Ernest Hemingway",
+        "F. Scott Fitzgerald"
+      ],
+      "answer": 0
+    }
+  ]
+}
