@@ -24,10 +24,24 @@ export async function renderQuestion(state) {
     const questionText = questionBody.querySelector("#question-text");
     questionText.textContent = question.question;
 
+    const answerContainer = questionBody.querySelector("#question-answers");
+    answerContainer.innerHTML = "";
+    renderQuestionButtons(question, answerContainer);
+
     page
       .querySelector(`[data-component="${questionTemplate.id}"]`)
       .appendChild(questionBody);
   } catch (error) {
     console.log(error);
   }
+}
+function renderQuestionButtons(question, answerContainer) {
+  question.options.forEach((element) => {
+    var button = document.createElement("BUTTON");
+
+    button.classList.add("btn", "btn-primary", "answer");
+    button.textContent = element;
+
+    answerContainer.appendChild(button);
+  });
 }

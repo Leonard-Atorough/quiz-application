@@ -18,3 +18,15 @@ export async function loadQuiz(state) {
 
   console.log("Quiz loaded successfully:", state);
 }
+
+export async function GetQuizNames() {
+  try {
+    const response = await fetch("./data/quiz.json");
+
+    if (!response) {
+      throw new Error("data file not found");
+    }
+
+    
+  } catch (error) {}
+}
