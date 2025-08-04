@@ -1,4 +1,19 @@
-export async function renderQuestion(state) {
+import { state } from "./state.js";
+
+export async function renderApp(onAnswerClick) {
+  console.log("here");
+  console.log(state.quizLength);
+  if (state.index <= state.quizLength || state.quizLength === 0) {
+    renderQuestion(onAnswerClick);
+  } else {
+    window.alert(
+      `Quiz over. Your score is: ${state.score}/${state.quizLength}`
+    );
+  }
+}
+
+async function renderQuestion(onAnswerClick) {
+  console.log("here");
   const page = document.getElementById("main-content");
   if (!page) {
     console.log("Error: Unable to get element with id: 'main-content'.");
@@ -26,21 +41,27 @@ export async function renderQuestion(state) {
 
     const answerContainer = questionBody.querySelector("#question-answers");
     answerContainer.innerHTML = "";
-    renderQuestionButtons(question, answerContainer);
 
-    page
-      .querySelector(`[data-component="${questionTemplate.id}"]`)
-      .appendChild(questionBody);
+    renderQuestionButtons(question, answerContainer, onAnswerClick);
+
+    let questionContainer = page.querySelector(
+      `[data-component="${questionTemplate.id}"]`
+    );
+    questionContainer.innerHTML = "";
+    questionContainer.appendChild(questionBody);
   } catch (error) {
     console.log(error);
   }
 }
-function renderQuestionButtons(question, answerContainer) {
-  question.options.forEach((element) => {
+function renderQuestionButtons(question, answerContainer, onAnswerClick) {
+  question.options.forEach((element, index) => {
     var button = document.createElement("BUTTON");
 
     button.classList.add("btn", "btn-primary", "answer");
     button.textContent = element;
+    button.id = index;
+    button.type = "button";
+    button.onclick = () => onAnswerClick(index);
 
     answerContainer.appendChild(button);
   });

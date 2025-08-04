@@ -1,13 +1,21 @@
-import { renderQuestion } from "./lib/uiRender.js";
+import { renderApp } from "./lib/uiRender.js";
 import { state } from "./lib/state.js";
-import { loadQuiz } from "./lib/quizEngine.js";
-
-
+import { loadQuiz, CheckAnswer } from "./lib/quizEngine.js";
 
 window.addEventListener("DOMContentLoaded", () => {
-  loadQuiz(state);
+  loadQuiz("General Knowledge Quiz");
 });
 
 window.addEventListener("load", () => {
-    renderQuestion(state);
+  renderApp(handleAnswerClick);
 });
+
+export function handleAnswerClick(selectedAnswer) {
+  const correctAnswer = state.questions[state.index - 1].answer;
+  console.log(selectedAnswer);
+  console.log(correctAnswer);
+  var result = CheckAnswer(correctAnswer, selectedAnswer);
+  if (result) {
+    renderApp(handleAnswerClick);
+  }
+}

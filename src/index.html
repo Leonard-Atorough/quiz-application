@@ -7,24 +7,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link href="styles.css" rel="stylesheet" />
+
 </head>
 
 <body>
-    <header class="container-xl">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Ultimate Quiz Platform</a>
+    <header class="">
+        <nav class="navbar navbar-expand-lg sticky-top bg-primary">
+            <div class="container-fluid d-flex justify-content-between">
+                <a class="navbar-brand text-white fs-3" href="#">Ultimate Quiz Platform</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="Home" href="#">Home</a>
+                            <a class="nav-link text-white fs-5" aria-current="Home" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-5" aria-current="Home" href="#">Create Quiz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-5" aria-current="Home" href="#">Join Quiz</a>
                         </li>
                     </ul>
+
                 </div>
             </div>
         </nav>
@@ -34,6 +42,7 @@
     </main>
 </body>
 <script src="app.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>
 

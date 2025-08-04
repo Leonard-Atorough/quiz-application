@@ -1,28 +1,74 @@
-{
-  "quizName": "General Knowledge Quiz",
-  "questions": [
-    {
-      "id": 1,
-      "question": "What is the capital of France?",
-      "options": ["Berlin", "Madrid", "Paris", "Rome"],
-      "answer": 2
-    },
-    {
-      "id": 2,
-      "question": "What is the largest planet in our solar system?",
-      "options": ["Earth", "Jupiter", "Saturn", "Mars"],
-      "answer": 1
-    },
-    {
-      "id": 3,
-      "question": "Who wrote 'To Kill a Mockingbird'?",
-      "options": [
-        "Harper Lee",
-        "Mark Twain",
-        "Ernest Hemingway",
-        "F. Scott Fitzgerald"
-      ],
-      "answer": 0
-    }
-  ]
-}
+[
+  {
+    "quizName": "General Knowledge Quiz",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the capital of France?",
+        "options": ["Berlin", "Madrid", "Paris", "Rome"],
+        "answer": 2
+      },
+      {
+        "id": 2,
+        "question": "What is the largest planet in our solar system?",
+        "options": ["Earth", "Jupiter", "Saturn", "Mars"],
+        "answer": 1
+      },
+      {
+        "id": 3,
+        "question": "Who wrote 'To Kill a Mockingbird'?",
+        "options": [
+          "Harper Lee",
+          "Mark Twain",
+          "Ernest Hemingway",
+          "F. Scott Fitzgerald"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "quizName": "Science Quiz",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the chemical symbol for oxygen?",
+        "options": ["H2O", "CO2", "O2", "NaCl"],
+        "answer": 2
+      },
+      {
+        "id": 2,
+        "question": "What is the speed of light?",
+        "options": [
+          "300,000 km/s",
+          "150,000 km/s",
+          "1,000,000 km/s",
+          "500,000 km/s"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "quizName": "History Quiz",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Who was the second President of the United States?",
+        "options": [
+          "George Washington",
+          "Thomas Jefferson",
+          "Abraham Lincoln",
+          "John Adams"
+        ],
+        "answer": 3
+      },
+      {
+        "id": 2,
+        "question": "What year did World War II end?",
+        "options": ["1953", "1945", "1939", "1950"],
+        "answer": 1
+      }
+    ]
+  }
+]
