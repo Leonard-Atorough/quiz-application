@@ -1,8 +1,7 @@
 import { state } from "./state.js";
 
 export async function renderApp(onAnswerClick) {
-  console.log("here");
-  console.log(state.quizLength);
+  // weird thing here where state is not yet initialized so have put a temp workaround
   if (state.index <= state.quizLength || state.quizLength === 0) {
     renderQuestion(onAnswerClick);
   } else {
@@ -53,6 +52,7 @@ async function renderQuestion(onAnswerClick) {
     console.log(error);
   }
 }
+
 function renderQuestionButtons(question, answerContainer, onAnswerClick) {
   question.options.forEach((element, index) => {
     var button = document.createElement("BUTTON");

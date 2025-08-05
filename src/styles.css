@@ -60,6 +60,7 @@ button {
 }
 
 .question-text {
+  border: 1px red solid;
   font-size: 36px;
   padding: 20px 10px;
   background: #21252988;
@@ -68,10 +69,11 @@ button {
 }
 
 .question-answers {
+  border: 1px red solid;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px red solid;
   height: 100%;
 }
 
